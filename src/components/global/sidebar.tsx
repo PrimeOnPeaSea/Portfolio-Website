@@ -9,6 +9,9 @@ import {
   IconBuilding,
   IconCube,
   IconPhoneCall,
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconBrandTwitter,
 } from "@tabler/icons-react";
 import ShinyButton from "@/components/ui/shiny-button";
 import { Badge } from "@/components/ui/badge";
@@ -66,6 +69,29 @@ export function SidebarComp({
       ),
     },
   ];
+  const socials = [
+    {
+      label: "LinkedIn",
+      href: "#",
+      icon: (
+        <IconBrandLinkedin className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "GitHub",
+      href: "#",
+      icon: (
+        <IconBrandGithub className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Twitter",
+      href: "#",
+      icon: (
+        <IconBrandTwitter className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+  ];
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -82,6 +108,12 @@ export function SidebarComp({
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
+              <hr className="border-t border-neutral-700 dark:border-neutral-200 max-w-[150px] mt-4" />
+              <div className="mt-4 flex flex-col gap-2">
+                {socials.map((social, idx) => (
+                  <SidebarLink key={idx} link={social} />
+                ))}
+              </div>
             </div>
           </div>
           <div className="md:flex flex-col overflow-x-hidden">

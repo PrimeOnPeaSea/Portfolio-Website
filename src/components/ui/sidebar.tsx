@@ -4,6 +4,7 @@ import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import Image from "next/image";
 
 interface Links {
   label: string;
@@ -119,6 +120,18 @@ export const MobileSidebar = ({
         )}
         {...props}
       >
+        <div className="flex items-center gap-4 z-20 w-full">
+          {/* <Image
+            src="/ParthSingh.jpeg"
+            alt="Web Arc"
+            width={30}
+            height={30}
+            className="rounded-full"
+          /> */}
+          <Link href="/">
+            <h1 className="text-lg font-semibold">Parth Singh</h1>
+          </Link>
+        </div>
         <div className="flex justify-end z-20 w-full">
           <IconMenu2
             className="text-neutral-800 dark:text-neutral-200"

@@ -25,7 +25,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarComp>{children}</SidebarComp>
+          <SidebarComp>
+            <div className="flex flex-1">
+              <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col items-center justify-between gap-2 flex-1 w-full h-full">
+                {children}
+              </div>
+            </div>
+          </SidebarComp>
         </ThemeProvider>
       </body>
     </html>
