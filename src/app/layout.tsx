@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarComp } from "@/components/global/sidebar";
@@ -33,6 +34,7 @@ export default function RootLayout({
             </div>
           </SidebarComp>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
